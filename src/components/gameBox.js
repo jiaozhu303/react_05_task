@@ -7,6 +7,7 @@ class GameBox extends Component {
     }
 
     render ()  {
+        console.log(this.props);
 
         let tpl = (<table>
             <tr>

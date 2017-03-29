@@ -7,12 +7,8 @@ class Mouse extends Component {
         super(props);
     }
 
-    componentWillReceiveProps(nextProps){
-        console.log('componentWillReceiveProps:',nextProps);
-    }
-
     shouldComponentUpdate(nextProps, nextState){
-        console.log('shouldComponentUpdate:',nextProps);
+
         return true;
     }
 

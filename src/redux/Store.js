@@ -20,31 +20,31 @@ let date = [{
     img: 'init'
 }, {
     id: 4,
-    show: false,
+    show: true,
     img: 'init'
 }, {
     id: 5,
-    show: false,
+    show: true,
     img: 'init'
 }, {
     id: 6,
-    show: false,
+    show: true,
     img: 'init'
 }, {
     id: 7,
-    show: false,
+    show: true,
     img: 'init'
 }, {
     id: 8,
-    show: false,
+    show: true,
     img: 'init'
 }, {
     id: 9,
-    show: false,
+    show: true,
     img: 'init'
 }];
 
-// let enhancer = compose(applyMiddleware( thunk), DevTool.instrument());
-let store = createStore(CounterReduce, date);
+let enhancer = compose(applyMiddleware( thunk));
+let store = createStore(CounterReduce, date, enhancer);
 
 export default store;
