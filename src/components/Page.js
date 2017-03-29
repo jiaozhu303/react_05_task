@@ -7,6 +7,7 @@ export default class Page extends Component {
     }
 
     render() {
+
         return (<div>
             <GameBox onHit={this.props.onHit} data={this.props.data}/>
         </div>);

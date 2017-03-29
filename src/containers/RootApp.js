@@ -1,14 +1,15 @@
 import {connect} from 'react-redux';
 import Page from '../components/Page';
 
-const onHit = (id) => {
-
-    return (dispatch, getState) => {
-        console.log(getState());
-        setTimeout(() => {
-            return dispatch({type: 'click', id: id});
-        }, 1000);
-    };
+const getHit = (id) => {
+    console.log(111);
+    // return (dispatch) => {
+    //     console.log(222);
+    //     // setTimeout(() => {
+    //         return dispatch({type: 'click', id: id});
+    //     // }, 1000);
+    // };
+    return {type: 'click', id: id};
 };
 
 
@@ -17,11 +18,11 @@ const mapStateToProps = (data) => {
     return {data: data};
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, getState) => {
 
     return {
         onHit: (id) => {
-            dispatch(onHit(id))
+            getHit(id);
         }
     };
 };

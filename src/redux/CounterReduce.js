@@ -1,6 +1,5 @@
 
 export default (data, action) => {
-
     switch (action.type) {
         case 'click':
             data.map((item) => {
@@ -8,10 +7,7 @@ export default (data, action) => {
                     item.show = false ;
                 }
             });
-
             return data;
-        case 'DECREMENT':
-            return data - 1;
         default:
             return data;
     }

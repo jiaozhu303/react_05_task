@@ -4,10 +4,10 @@ import Mouse from "./mouse";
 class GameBox extends Component {
     constructor(props) {
         super(props);
-    };
+    }
 
-    render = () => {
-        console.log(this.props.data);
+    render ()  {
+
         let tpl = (<table>
             <tr>
                 <td><Mouse onHit={this.props.onHit} item={this.props.data[0]}/></td>
@@ -31,7 +31,7 @@ class GameBox extends Component {
         return (<div className="game">
             {tpl}
         </div>);
-    };
+    }
 }
 
 export default GameBox;
