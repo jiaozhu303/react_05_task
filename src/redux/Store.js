@@ -8,43 +8,43 @@ import DevTool from '../containers/DevTool';
 //store
 let date = [{
     id: 1,
-    show: true,
+    show: false,
     img: 'init'
 }, {
     id: 2,
-    show: true,
+    show: false,
     img: 'init'
 }, {
     id: 3,
-    show: true,
+    show: false,
     img: 'init'
 }, {
     id: 4,
-    show: true,
+    show: false,
     img: 'init'
 }, {
     id: 5,
-    show: true,
+    show: false,
     img: 'init'
 }, {
     id: 6,
-    show: true,
+    show: false,
     img: 'init'
 }, {
     id: 7,
-    show: true,
+    show: false,
     img: 'init'
 }, {
     id: 8,
-    show: true,
+    show: false,
     img: 'init'
 }, {
     id: 9,
-    show: true,
+    show: false,
     img: 'init'
 }];
 
-let enhancer = compose(applyMiddleware( thunk));
+let enhancer = compose(applyMiddleware(thunk, createLogger()), DevTool.instrument());
 let store = createStore(CounterReduce, date, enhancer);
 
 export default store;

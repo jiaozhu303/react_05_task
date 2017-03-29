@@ -8,19 +8,19 @@ import RootApp from './containers/RootApp';
 
 import DevTool from './containers/DevTool';
 
-let node ;
-if(__DEV__){
+let node;
+if (__DEV__) {
     node = (
         <div>
-            {/*<DevTool />*/}
+            <DevTool />
             <RootApp />
         </div>
     );
 }
 
-if(__PROD__){
+if (__PROD__) {
     node = (
-            <RootApp />
+        <RootApp />
     );
 }
 
