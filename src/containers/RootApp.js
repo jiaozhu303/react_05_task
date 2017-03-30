@@ -13,12 +13,13 @@ const getStop = () => {
 
 const getBegin = () => {
 
+    console.log('click ... ');
     return (dispatch, getState) => {
         const settime = () => {
             gameAll = setTimeout(function () {
                 let data = getState();
-                let hasInitData = data.find(item => item.img === 'init');
-                let hasHitData = data.find(item => item.img === 'hit');
+                let hasInitData = data.items.find(item => item.img === 'init');
+                let hasHitData = data.items.find(item => item.img === 'hit');
                 if (count === 5) {
                     clearInterval(timer);
                     clearTimeout(gameAll);
@@ -48,7 +49,6 @@ const getBegin = () => {
             settime();
         }
         timer = setInterval(() => {
-
             return dispatch({type: 'witch'});
         }, 500);
     };

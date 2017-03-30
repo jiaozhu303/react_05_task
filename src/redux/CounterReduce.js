@@ -1,8 +1,8 @@
 export default (data, action) => {
     switch (action.type) {
         case 'click':
-            let newdata = [];
-            data.forEach((item) => {
+            let newdata = {};
+            data.items.forEach((item) => {
                 if (item.id === action.id) {
 
                     item.img = 'hit';
@@ -16,14 +16,15 @@ export default (data, action) => {
             if (num !== 0) {
                 id = num;
             }
-            let newdata2 = [];
-            data.forEach((item) => {
+            let newdata2 = {};
+            data.items.forEach((item) => {
                 if (item.id === id) {
                     item.show = true;
                 } else {
                     item.show = false;
                 }
             });
+            data.begin = true;
             Object.assign(newdata2, data);
             return newdata2;
         case 'stop':
