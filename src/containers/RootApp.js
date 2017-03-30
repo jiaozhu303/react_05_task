@@ -43,14 +43,14 @@ const getBegin = () => {
                     settime();
                 }
                 count = count + 1;
-            }, 10000);
+            }, 15000);
         };
         if (!gameAll) {
             settime();
         }
         timer = setInterval(() => {
             return dispatch({type: 'witch'});
-        }, 500);
+        }, 1000);
     };
 
 };

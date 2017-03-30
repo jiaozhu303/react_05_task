@@ -18,7 +18,7 @@ export default (data, action) => {
             }
             let newdata2 = {};
             data.items.forEach((item) => {
-                if (item.id === id) {
+                if (item.id === id && item.img === 'init') {
                     item.show = true;
                 } else {
                     item.show = false;
