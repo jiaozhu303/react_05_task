@@ -24,8 +24,8 @@ export default (data, action) => {
                     item.show = false;
                 }
             });
-            data.begin = true;
             Object.assign(newdata2, data);
+            newdata2.begin = true;
             return newdata2;
         case 'stop':
 
